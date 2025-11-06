@@ -1,0 +1,191 @@
+/* GLOBAL RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0d1b3d 0%, #162b56 60%, #0f2046 100%);
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  background: rgba(10, 25, 60, 0.95);
+  border-bottom: 1.5px solid rgba(0, 174, 255, 0.4);
+  padding: 0 6%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1ec8ff;
+  text-shadow: 0 0 10px #00b4ff;
+  letter-spacing: 1px;
+}
+.logo span { color: #ffffff; }
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.nav-links a {
+  color: #cdeeff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: #1ec8ff; }
+.get-started-btn {
+  background: linear-gradient(90deg, #00b4ff, #1ec8ff);
+  border: none;
+  border-radius: 30px;
+  color: #000;
+  font-weight: 700;
+  padding: 10px 36px;
+  box-shadow: 0 0 12px #00b4ff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.get-started-btn:hover { transform: scale(1.08); }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 8%;
+}
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #eaf6ff;
+  margin-bottom: 16px;
+}
+.hero .highlight {
+  color: #1ec8ff;
+  text-shadow: 0 0 15px #00b4ff;
+}
+.hero p {
+  font-size: 1.3rem;
+  max-width: 720px;
+  margin: 0 auto 28px;
+  opacity: 0.9;
+}
+.hero button {
+  background: linear-gradient(90deg, #00b4ff, #1ec8ff);
+  border: none;
+  border-radius: 30px;
+  color: #000;
+  font-weight: 700;
+  padding: 14px 48px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.hero button:hover { transform: translateY(-3px) scale(1.05); }
+
+/* UPLOAD */
+.upload-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 40px;
+}
+.upload-card {
+  background: rgba(0, 174, 255, 0.08);
+  border: 2.5px dashed #00b4ff;
+  border-radius: 20px;
+  padding: 48px 60px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 174, 255, 0.15);
+  transition: all 0.25s;
+}
+.upload-card:hover {
+  border-color: #1ec8ff;
+  box-shadow: 0 10px 35px rgba(0, 174, 255, 0.25);
+}
+
+/* FEATURES */
+.features-section {
+  background: linear-gradient(135deg, rgba(30, 200, 255, 0.08) 0%, rgba(0, 174, 255, 0.09) 100%);
+  padding: 60px 5%;
+  border-top: 1px solid rgba(0, 174, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 174, 255, 0.3);
+}
+.features-section h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 45px;
+}
+.features-section .highlight {
+  color: #00b4ff;
+  text-shadow: 0 0 12px #00b4ff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.feature-card {
+  background: rgba(12, 36, 66, 0.95);
+  border: 1.5px solid rgba(0, 174, 255, 0.3);
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 174, 255, 0.1);
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: #1ec8ff;
+  box-shadow: 0 12px 30px rgba(0, 174, 255, 0.25);
+}
+.feature-card h3 {
+  color: #1ec8ff;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.feature-card p {
+  color: #cdeeff;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #0a1b2e;
+  padding: 35px;
+  text-align: center;
+  color: #cdeeff;
+  font-weight: 500;
+  font-size: 1rem;
+  border-top: 1px solid rgba(0, 174, 255, 0.25);
+}
+.footer .brand {
+  color: #00b4ff;
+  text-shadow: 0 0 8px #00b4ff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.6rem; }
+  .hero p { font-size: 1.1rem; }
+  .features-section h2 { font-size: 1.9rem; }
+}
+@media (max-width: 480px) {
+  .navbar { flex-direction: column; gap: 10px; height: auto; padding: 10px; }
+  .hero { padding: 40px 5%; }
+  .feature-card { padding: 20px 10px; }
+}
